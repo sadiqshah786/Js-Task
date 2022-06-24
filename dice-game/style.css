@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #ccc;
+  background: linear-gradient(#ccc, #bbb);
+  perspective: 1000px;
+}
+
+@keyframes rotatedice {
+  0% {
+    transform: translate(-50%, -70%) rotateX(60deg) rotateZ(0);
+  }
+
+  100% {
+    transform: translate(-50%, -70%) rotateX(60deg) rotateZ(360deg);
+  }
+}
+
+@keyframes updatecolor {
+
+  0%,
+  100% {
+    background-color: #eee;
+  }
+
+  49.9999% {
+    background-color: #e8e8e8;
+  }
+
+  50% {
+    background-color: #f8f8f8;
+  }
+}
+
+@keyframes rotatefacea {
+
+  0%,
+  24.9999%,
+  75%,
+  100% {
+    transform: rotateX(90deg);
+    transform-origin: 50% 100%;
+    background-image:
+      radial-gradient(circle at 25% 25%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 25% 50%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 25% 75%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 75% 25%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 75% 50%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 75% 75%, #222 2vmin, #0000 0);
+  }
+
+  25%,
+  74.9999% {
+    transform: rotateX(-90deg);
+    transform-origin: 50% 0%;
+    background-image:
+      radial-gradient(circle at 50% 50%, #222 2vmin, #0000 0);
+  }
+}
+
+@keyframes rotatefaceb {
+
+  0%,
+  24.9999%,
+  75%,
+  100% {
+    transform: rotateY(90deg);
+    transform-origin: 0% 50%;
+    background-image:
+      radial-gradient(circle at 75% 25%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 50% 50%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 25% 75%, #222 2vmin, #0000 0);
+  }
+
+  25%,
+  74.9999% {
+    transform: rotateY(-90deg);
+    transform-origin: 100% 50%;
+    background-image:
+      radial-gradient(circle at 25% 25%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 75% 25%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 25% 75%, #222 2vmin, #0000 0),
+      radial-gradient(circle at 75% 75%, #222 2vmin, #0000 0);
+  }
+}
+
+.dice {
+  animation: rotatedice 10s linear infinite;
+  width: 30vmin;
+  height: 30vmin;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%) rotateX(60deg);
+  background-image:
+    radial-gradient(circle at 25% 25%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 25% 75%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 75% 25%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 75% 75%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 50% 50%, #222 2vmin, #0000 0);
+  background-color: #fff;
+  transform-style: preserve-3d;
+  box-shadow: inset 0 0 5vmin #0001;
+}
+
+.dice::before {
+  animation:
+    rotatefacea 10s linear infinite,
+    updatecolor 5s linear infinite;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 25% 25%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 25% 50%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 25% 75%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 75% 25%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 75% 50%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 75% 75%, #222 2vmin, #0000 0);
+  background-color: #eee;
+  transform: rotateX(90deg);
+  box-shadow: inset 0 0 5vmin #0001;
+}
+
+.dice::after {
+  animation:
+    rotatefaceb 10s linear infinite,
+    updatecolor 5s linear infinite;
+  animation-delay: -2.5s, -2.5s;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 75% 25%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 50% 50%, #222 2vmin, #0000 0),
+    radial-gradient(circle at 25% 75%, #222 2vmin, #0000 0);
+  background-color: #eee;
+  transform: rotateX(90deg);
+  box-shadow: inset 0 0 5vmin #0001;
+}
+
+.dice_task {
+  background-color: #a29bfe;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  display: grid;
+  place-content: space-around;
+}
+
+.roll_the_div {
+  z-index: 999;
+  position: absolute;
+  bottom: 16%;
+}
+
+.dice {
+  margin-top: -10%;
+}
+
+.text_button {
+  text-align: center;
+}
+
+.roll_the_div {
+  z-index: 999;
+  position: absolute;
+  bottom: 16%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  top: 70%;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 10px 20px;
+  width: 20%;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+p#dice_text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+
+@media only screen and (max-width:600px) {
+  .dice {
+    margin-top: -20%;
+  }
+
+  button {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width:320px) {
+
+  button {
+    width: 50%;
+  }
+}
