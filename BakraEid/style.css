@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family:alfars ;
+    src: url(assests/fonta/alfars-regular/AlFars-Regular.ttf);
+}
+@font-face {
+    font-family:urdu ;
+    src: url(assests/fonta/urdu.ttf);
+}
+.main_page{
+    background-image: url(assests/img/13669.png);
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+body{
+    font-family:urdu ;
+}
+h1,p{
+    font-family:urdu ;
+}
+.img_text {
+    /* width: 70%; */
+    margin: 0 auto;
+    text-align: right;
+    /* padding: 30px 50px; */
+}
+.text_portion{
+    padding: 0px 50px;
+}
+.img_text h1 {
+    color: #e0c367;
+    font-size: 60px;
+}
+.img_text p {
+    font-size: 20px;
+}
+.slider {
+    text-align: right;
+}
+.slider1 {
+    /* border: 1px solid; */
+    /* width: 50%; */
+    /* margin: 0 auto; */
+    padding: 0px 30px;
+    margin-bottom: 20px;
+    background: #fffefa;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+.slider {
+    text-align: right;
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    right: 2%;
+    padding: 10px 30px;
+    
+}
+
+
+
+/* slider  */
