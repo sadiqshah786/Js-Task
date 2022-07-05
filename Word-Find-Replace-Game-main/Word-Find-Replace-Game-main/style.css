@@ -1,0 +1,415 @@
+@font-face {
+    font-family: Bewise;
+    src: url(assests/fonts/bewise/Bewise.ttf);
+}
+
+@font-face {
+    font-family: Retro_Team;
+    src: url(assests/fonts/retro_team/Retro_Team.otf);
+}
+
+
+@font-face {
+    font-family: james_stroker;
+    src: url(assests/fonts/james_stroker/James_Stroker.ttf);
+}
+
+@font-face {
+    font-family: JosefinSans;
+    src: url(assests/fonts/josefin-sans/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(assests/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+/* body {
+    background-image: url(assests/img/cover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+} */
+.main_card {
+    margin-top: -90px;
+}
+.card {
+    width: 35rem;
+    margin: 80px auto;
+}
+
+
+body {
+    /* background-color: #4e54c6; */
+    /* background: #eef0f4; */
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8); 
+}
+div#before span,div#foods span {
+    font-family: Poppins;
+}
+.card img {
+    width: 20%;
+}
+
+.card {
+    width: 35rem;
+    /* margin: 80px auto; */
+    padding: 30px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    background: #eef0f4;
+    margin-top: 110px;
+}
+
+.img_wrapper {
+    text-align: center;
+}
+
+.card-text {
+    font-family: Bewise;
+}
+
+.card-text span {
+    font-family: Retro_Team;
+    color: #4e54c6;
+    font-size: 45px;
+}
+p.card-text {
+    font-size: 35px;
+    text-align: center;
+}
+
+.tag p {
+    font-family: james_stroker;
+    font-size: 23px;
+    text-align: center;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu button {
+    text-decoration: none;
+    color: #fff;
+    background: #696fcff2;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    width: 35%;
+    font-family: Retro_Team;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.card.card2 {
+    width: 40rem;
+}
+.foods, .parabefore {
+    width: 80%;
+    margin: -46px auto;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.foods p {
+    text-align: center;
+    font-size: 22px;
+    font-family: JosefinSans;
+    font-weight: 700;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    background: #e7e9ed;
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: JosefinSans;
+}
+div#foods ul li {
+    background: #656acea6;
+    color: #fff;
+}
+div#order p,
+.swal-text {
+    text-align: center;
+    background: #f1b815;
+    color: #fff;
+    padding: 10px;
+    font-family: JosefinSans;
+    font-size: 22px;
+}
+.none{
+    display: none;
+}
+.swal-text {
+    background-color: unset;
+    color: #000;
+}
+
+b,
+strong {
+    font-weight: bolder;
+    font-size: 24px;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.swal-button {
+    background: #696fcff2;
+}
+
+.swal-button:hover {
+    background: #696fcff2;
+}
+ h5 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'JosefinSans';
+}
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+/* .area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
+} */
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: sienna;
+    color: #000;
+    font-family: 'JosefinSans';
+    font-size: 18px;
+}
+textarea:focus,input:focus{
+    outline: none;
+}
+.inner_input input {
+    width: 100%;
+    padding: 10px;
+    font-family: 'JosefinSans';
+    border: none;
+    font-size: 18px;
+}
+@media screen and (max-width:600px) {
+    .menu button {
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+    .card {
+        width: 30rem;
+       
+    }
+}
+
+@media screen and (max-width:425px) {
+    .menu{
+        flex-direction:column;
+        justify-content: center;
+        text-align: center;
+    }
+    .card {
+        width: 22rem;
+    }
+    .card-text span {
+     
+        font-size: 36px;
+    }
+    .menu button {
+        padding: 13px 20px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        width: 60%;
+        margin: 7px auto;
+    }
+}
+@media screen and (max-width:375px) {
+    .card {
+        width: 18rem;
+    }
+    .card-text span {
+        font-size: 32px;
+    }
+    .foods, .parabefore {
+        width: 100%;
+        margin: -20px auto;
+        padding: unset;
+        margin-bottom: 30px;
+    }
+    textarea {
+        width: 86%;
+        padding: 15px;
+    }
+    .inner_input input {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:320px) {
+    .card {
+        width: 19rem;
+        padding: unset;
+    }
+    .card-body{
+        padding: 20px;
+    }
+    div#foods ul li {
+     
+        line-height: 24px;
+    }
+    textarea {
+        width: 86%;
+        padding: 15px;
+    }
+    .inner_input input {
+        width: 90%;
+        padding: 10px;
+        font-family: 'JosefinSans';
+        border: none;
+        font-size: 14px;
+    }
+    
+}
