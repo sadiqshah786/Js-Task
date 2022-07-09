@@ -1,4 +1,4 @@
-var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 var currentDate = new Date().getTime();
 
 var EidDay1 = new Date("july 10, 2022").getTime();
@@ -22,7 +22,7 @@ var EidDay4 = new Date("july 12, 2022 11:00:00").getTime();
 
 
 
-console.log(days[EidDayName1]  + " " + EidDate1)
+console.log(days[EidDayName1] + " " + EidDate1)
 console.log(days[EidDayName2] + " " + EidDate2)
 console.log(days[EidDayName3] + " " + EidDate3)
 
@@ -41,9 +41,9 @@ var diff4 = EidDay4 - currentDate;
 // ------------------------------
 // Days 
 // ------------------------
-var firstEid = Math.ceil(diff1/(1000*60*60*24))
-var SecEid = Math.ceil(diff2/(1000*60*60*24))
-var thirdEid = Math.ceil(diff3/(1000*60*60*24))
+var firstEid = Math.round(diff1 / (1000 * 60 * 60 * 24))
+var SecEid = Math.round(diff2 / (1000 * 60 * 60 * 24))
+var thirdEid = Math.round(diff3 / (1000 * 60 * 60 * 24))
 
 var eid1 = document.getElementById('eid1');
 var ganty = document.getElementById('ganty');
@@ -63,16 +63,16 @@ eid3.innerHTML = `<h3>پاکستان میں تیسری  عیدالاضحیٰ  ${
 // Hours 
 // --------------------
 
-var firstEidHours = Math.ceil(diff1/(1000*60*60))
-var SecEidHours = Math.ceil(diff2/(1000*60*60))
-var thirdEidHours = Math.ceil(diff3/(1000*60*60))
+var firstEidHours = Math.ceil(diff1 / (1000 * 60 * 60))
+var SecEidHours = Math.ceil(diff2 / (1000 * 60 * 60))
+var thirdEidHours = Math.ceil(diff3 / (1000 * 60 * 60))
 
 
 // -------------------------
 // Last Time of Qurbani 
 // -----------------------
 
-var LastDayQurbani = Math.ceil(diff4/(1000*60*60))
+var LastDayQurbani = Math.ceil(diff4 / (1000 * 60 * 60))
 
 var note = document.getElementById('note');
 note.innerHTML = `<strong>*خیال رہے اپنے جانواروں کی قربانی تیسری عید کے طلوع آفتاب سے پہلے کر لن جو ${LastDayQurbani}گھنٹے ہوتے ہیں</b>`
@@ -81,11 +81,21 @@ note.innerHTML = `<strong>*خیال رہے اپنے جانواروں کی قرب
 // Mintues 
 // -----------------------
 
-var firstEidMinutes = Math.ceil(diff1/(1000*60))
-var SecEidMintues = Math.ceil(diff2/(1000*60))
-var thirdEidMintues = Math.ceil(diff3/(1000*60))
+var firstEidMinutes = Math.ceil(diff1 / (1000 * 60))
+var SecEidMintues = Math.ceil(diff2 / (1000 * 60))
+var thirdEidMintues = Math.ceil(diff3 / (1000 * 60))
 
 ganty.innerHTML = `<p>اور یہ   ${firstEidHours}گھنٹے ہوتے ہیں, ${firstEidMinutes}منٹس ہوتے ہیں</p>`;
 gant2.innerHTML = `<p>اور یہ   ${SecEidHours}گھنٹے ہوتے ہیں, ${SecEidMintues}منٹس ہوتے ہیں</p>`;
 gant3.innerHTML = `<p>اور یہ   ${thirdEidHours}گھنٹے ہوتے ہیں, ${thirdEidMintues}منٹس ہوتے ہیں</p>`;
 
+
+
+if (firstEid === 0) {
+    var main = document.getElementById("main");
+    main.classList+= " main";
+
+    var box = document.getElementById("box");
+    box.classList += " bg block"
+    main.innerHTML = `<p class="para" >Eid Mubark</p>`
+}
